@@ -1,0 +1,54 @@
+:root {
+  --green-light: hsl(148, 38%, 91%);
+  --green-medium: hsl(169, 82%, 27%);
+  --red: hsl(0, 66%, 54%);
+  --white: hsl(0, 0%, 100%);
+  --grey-medium: hsl(186, 15%, 59%);
+  --grey-darker: hsl(187, 24%, 22%);
+  height: 100%;
+  width: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+.main {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  /* margin: auto; */
+  /* margin-top: 10%; */
+}
+.main form {
+  padding: 3%;
+  background-color: green;
+}
+.nameSection {
+  display: flex;
+  gap: 3%;
+}
+.firstNameSection,
+.lastNameSection,
+.emailSection,
+.querySection,
+.messageSection {
+  display: flex;
+  flex-direction: column;
+  /* flex: 1; */
+  margin-top: 1%;
+}
+.firstNameSection {
+  margin-right: 2%;
+}
+.lastNameSection {
+  margin-left: 2%;
+}
+.queryOption {
+  display: flex;
+  gap: 3%;
+}
+.queryOptionDivs {
+  border: 1px solid black;
+  border-radius: 5px;
+  flex: 1;
+}

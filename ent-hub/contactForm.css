@@ -1,0 +1,220 @@
+:root {
+  --green-light: hsl(148, 38%, 91%);
+  --green-medium: hsl(169, 82%, 27%);
+  --red: hsl(0, 66%, 54%);
+  --white: hsl(0, 0%, 100%);
+  --grey-medium: hsl(186, 15%, 59%);
+  --grey-darker: hsl(187, 24%, 22%);
+  height: 100%;
+  width: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "karla";
+  src: url("./karla/Karla-Regular.ttf");
+}
+body {
+  font-family: "karla";
+}
+.hidden {
+  display: none !important;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: auto; */
+  /* margin-top: 10%; */
+  height: 100%;
+  background-color: var(--green-light);
+}
+.main form {
+  padding: 3%;
+  background-color: var(--white);
+  border-radius: 15px;
+  width: 50%;
+}
+.nameSection {
+  display: flex;
+  gap: 3%;
+  flex-wrap: wrap;
+}
+.nameSection input {
+  width: 100%;
+}
+.main div {
+  padding-bottom: 5px;
+}
+input {
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid var(--grey-medium);
+  padding: 10px;
+  padding-left: 15px;
+  font-size: initial;
+}
+input:hover {
+  border: 1px solid var(--green-medium);
+  cursor: pointer;
+}
+input:focus-visible {
+  /* border: 1px solid var(--green-medium); */
+  accent-color: var(--green-medium);
+}
+input[type="radio"] {
+  border: none;
+  padding: 0px;
+  margin-top: 0px;
+  margin-right: 5px;
+  width: 6%;
+}
+input[type="radio"]:checked {
+  accent-color: var(--green-medium);
+}
+input[type="checkbox"] {
+  accent-color: var(--green-medium);
+}
+.queryOptionDivs:has(input[type="radio"]:checked) {
+  background-color: var(--green-light);
+}
+
+.firstNameSection,
+.lastNameSection,
+.emailSection,
+.querySection,
+.messageSection {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  margin-top: 1%;
+}
+.firstNameSection:has(input:invalid) > .error,
+.lastNameSection:has(input:invalid) > .error,
+.emailSection:has(input:invalid) > .error,
+.querySection:has(input:invalid) > .error,
+.messageSection:has(textarea:invalid) > .error,
+.consentSection:has(input:invalid) > .error {
+  display: block;
+  color: var(--red);
+  input:invalid {
+    border: 1px solid var(--red);
+  }
+  textarea:invalid {
+    border: 1px solid var(--red);
+  }
+}
+.firstNameSection:has(input:valid) > .error,
+.lastNameSection:has(input:valid) > .error,
+.emailSection:has(input:valid) > .error,
+.querySection:has(input:valid) > .error,
+.messageSection:has(textarea:valid) > .error,
+.consentSection:has(input:valid) > .error {
+  display: none;
+}
+
+/* .firstNameSection {
+  margin-right: 2%;
+}
+.lastNameSection {
+  margin-left: 2%;
+} */
+label {
+  display: flex;
+  flex-direction: column;
+  color: var(--grey-darker);
+  /* margin-bottom: 6px; */
+}
+.queryTitle {
+  color: var(--grey-darker);
+}
+.queryOption {
+  display: flex;
+  gap: 3%;
+  margin-top: 1%;
+  flex-wrap: wrap;
+}
+.queryOptionDivs {
+  border: 1px solid var(--grey-medium);
+  border-radius: 5px;
+  flex: 1 1 auto;
+  margin-bottom: 10px;
+}
+.queryOptionDivs label {
+  cursor: pointer;
+  display: flex;
+  padding: 10px;
+  flex-direction: initial;
+}
+.messageSection {
+  margin-bottom: 2%;
+}
+.messageSection input {
+  min-height: 90px;
+}
+.consentSection {
+  margin-bottom: 2%;
+}
+.consentSection label {
+  flex-direction: row;
+  margin-left: 0px;
+  input {
+    margin-left: 0px;
+  }
+}
+.btnSection {
+  display: flex;
+}
+.submitBtn {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  background-color: var(--green-medium);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.messageTextArea {
+  min-height: 100px;
+  padding: 5px;
+  font-family: inherit;
+  padding-left: 15px;
+  border: 1px solid var(--grey-medium);
+  accent-color: var(--green-medium);
+  border-radius: 5px;
+  resize: none;
+  margin-top: 5px;
+}
+.messageTextArea:hover {
+  border: 1px solid var(--green-medium);
+}
+.error {
+  /* color: var(--red); */
+  display: none;
+}
+
+/* modal */
+.modalHolder {
+  position: fixed;
+  top: -100%;
+  background-color: var(--grey-darker);
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+.modalContent {
+  padding: 10px;
+  color: var(--white);
+}
+.modaltitle {
+  display: flex;
+  font-weight: bold;
+}
+.modaltitletext {
+  padding-left: 5px;
+}
+.modalHolder.bringDown {
+  top: 0px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="main">
+      <form action="">
+        <h1>Contact Us</h1>
+        <div class="nameSection">
+          <div class="firstNameSection">
+            <label htmlFor="firstName"
+              >First Name *
+              <input type="text" id="firstName" required />
+            </label>
+          </div>
+          <div class="lastNameSection">
+            <label htmlFor="lastName"
+              >Last Name *
+              <input type="text" id="lastName" required />
+            </label>
+          </div>
+        </div>
+        <div class="emailSection">
+          <label htmlFor="emailId"
+            >Email address *
+            <input type="email" id="emailId" required />
+          </label>
+        </div>
+        <div class="querySection">
+          <div>Query Type *</div>
+          <div class="queryOption">
+            <div class="queryOptionDivs genInquiry">
+              <input type="radio" name="General inquiry" id="queryOption" />
+              General Inquiry
+            </div>
+            <div class="queryOptionDivs suppReq">
+              <input type="radio" name="Support Request" id="queryOption" />
+              Support Request
+            </div>
+          </div>
+        </div>
+        <div class="messageSection">
+          <label htmlFor="message"
+            >Message *
+            <input type="text" id="message" required />
+          </label>
+        </div>
+        <div class="consentSection">
+          <input
+            type="checkbox"
+            name="consentCheck"
+            id="consentCheck"
+            required
+          />
+          <span> I consent to being contacted by the team *</span>
+        </div>
+        <button class="submitBtn" type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

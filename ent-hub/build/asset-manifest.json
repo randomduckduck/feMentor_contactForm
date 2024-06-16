@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/feMentor_contactForm/static/css/main.13e9c51c.css",
+    "main.js": "/feMentor_contactForm/static/js/main.e0bebb02.js",
+    "static/media/Karla-Regular.ttf": "/feMentor_contactForm/static/media/Karla-Regular.c97718a43c1b3c8d227a.ttf",
+    "index.html": "/feMentor_contactForm/index.html",
+    "main.13e9c51c.css.map": "/feMentor_contactForm/static/css/main.13e9c51c.css.map",
+    "main.e0bebb02.js.map": "/feMentor_contactForm/static/js/main.e0bebb02.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13e9c51c.css",
+    "static/js/main.e0bebb02.js"
+  ]
+}
